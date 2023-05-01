@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_fragment"
+        android:title="Home"
+        android:checked="false"
+        android:icon="@drawable/navbar_home_icon"/>
+    <item
+        android:id="@+id/schedule_fragment"
+        android:title="Schedule"
+        android:checked="false"
+        android:icon="@drawable/navbar_schedule_icon"/>
+    <item
+        android:id="@+id/profile_fragment"
+        android:title="Profile"
+        android:checked="false"
+        android:icon="@drawable/navbar_profile_icon"/>
+</menu>

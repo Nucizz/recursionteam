@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="15dp"
+    android:paddingTop="30dp"
+    android:isScrollContainer="true"
+    android:orientation="vertical"
+    android:background="@drawable/default_background"
+    tools:context=".activities.fragment.HomeFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/poppins"
+        android:gravity="left"
+        android:text="HOME"
+        android:textColor="@color/white_100"
+        android:textFontWeight="600"
+        android:textSize="32dp" />
+
+    <View
+        android:layout_width="65dp"
+        android:layout_height="5dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/acc_green" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/teamLogo1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/logo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/matchDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="DAY, MON XX"
+                        android:textColor="@color/white_100"
+                        android:textFontWeight="600"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/matchTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="00:00 GMT"
+                        android:textColor="@color/white_100"
+                        android:textFontWeight="400"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/matchLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="Venue Location"
+                        android:textColor="@color/white_100"
+                        android:textFontWeight="400"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/teamLogo2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/logo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bookButton"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginTop="30dp"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/poppins"
+                android:background="@drawable/ui_corner_15"
+                android:backgroundTint="@color/acc_green"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="BOOK NOW"
+                android:paddingHorizontal="15dp"
+                android:textColor="@color/black_75"
+                android:textFontWeight="600"
+                android:textSize="18dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/articleList"
+                android:nestedScrollingEnabled="false"
+                android:clipToPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                tools:listitem="@layout/item_article"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

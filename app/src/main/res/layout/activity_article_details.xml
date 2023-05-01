@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingHorizontal="15dp"
+    android:paddingTop="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/default_background"
+    tools:context=".activities.ArticleDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/backButton"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:paddingLeft="5dp"
+            android:gravity="left"
+            android:includeFontPadding="false"
+            android:text="Back"
+            android:textColor="@color/white_100"
+            android:textFontWeight="400"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="30dp"
+                app:cardCornerRadius="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/articleThumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:src="@color/white_100" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/articleTitle"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/poppins"
+                android:gravity="left"
+                android:text="TITLE OF ARTICLE"
+                android:textColor="@color/white_100"
+                android:textFontWeight="600"
+                android:textSize="24dp" />
+
+            <View
+                android:layout_width="65dp"
+                android:layout_height="4dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/acc_green" />
+
+            <TextView
+                android:id="@+id/articleDescrition"
+                android:layout_marginBottom="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:fontFamily="@font/poppins"
+                android:justificationMode="inter_word"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc luctus metus sit amet sollicitudin varius. Cras imperdiet elementum pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean nec ullamcorper nunc. Curabitur lectus nunc, varius et ex vitae, sollicitudin consequat tellus. Nunc volutpat purus leo, ut posuere enim malesuada sed. Maecenas in mollis risus, eu pharetra ligula. Aliquam ut magna libero. Proin imperdiet porttitor lacus. Sed mauris nunc, pulvinar ut nisi et, aliquam vestibulum libero. Sed massa sem, mattis vel felis dictum, pretium congue ipsum. Ut interdum lacus sit amet efficitur fringilla. Pellentesque vel convallis sapien."
+                android:textColor="@color/white_100"
+                android:textFontWeight="400"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
